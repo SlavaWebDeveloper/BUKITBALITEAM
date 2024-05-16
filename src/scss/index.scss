@@ -1,0 +1,16 @@
+@use "base";
+@use "fonts";
+@use "media";
+@use "mixin";
+@use "sticky-footer";
+@use "utils";
+@use "varibles";
+
+@import "normalize.css";
+
+@import "./modules/header.scss";
+@import "./modules/nav.scss";
+@import "./modules/form.scss";
+
+
+@import "./modules/footer.scss";

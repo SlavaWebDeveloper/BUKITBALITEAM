@@ -1,0 +1,47 @@
+/*========== Container ==========*/
+$container: 1440px;
+$padding-inline: 20px;
+$header-height: 5.5rem;
+
+/*========== Icons ==========*/
+$size-icon: 2.5rem;
+$color-icon: #eeeeee;
+
+/*========== Main Colors ==========*/
+$bg: #f2f6f7;
+$accent: #ff5a3d;
+$title-color: #071a1d;
+$white: #eeeeee;
+
+/*========== Alt Colors ==========*/
+$dark: #333333;
+$peach: #ffefec;
+$gray: #5d737e;
+$fon-cart: rgba(255, 255, 255, 0.2);
+$black: #000000;
+
+/*========== Footer Colors ==========*/
+$footer-bg: #191d2c;
+$footer-color: #e9ece0;
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$font-family: "Poppins", sans-serif;
+$second-family: "Montserrat Alternates", sans-serif;
+$h1-font-size: 4rem;
+$h2-font-size: 1.125rem;
+$h3-font-size: 1.75rem;
+$subtitle-font-size: 3.125rem;
+$normal-font-size: 1.125rem;
+$small-font-size: 0.875rem;
+$accent-font-size: 1.25rem;
+$header-footer-font-size: 1.5rem;
+
+/*========== Font weight ==========*/
+$font-regular: 400;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;

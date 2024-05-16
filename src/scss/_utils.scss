@@ -1,0 +1,68 @@
+@use "./varibles" as *;
+@use "./media" as *;
+
+/*========== REUSABLE CSS CLASSES ==========*/
+
+.container {
+  max-width: calc($container + 2 * $padding-inline);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: $padding-inline;
+
+  // @include mobile {
+  //   margin-inline: 1rem;
+  // }
+
+  // @include laptop-above {
+  //   margin-inline: auto;
+  // }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+
+  @include laptop-above {
+    padding-block: 7rem 2rem;
+  }
+}
+
+.section__title {
+  font-family: $second-family;
+  font-weight: $font-bold;
+  font-size: $normal-font-size;
+  color: $accent;
+  line-height: 1.1;
+  border-radius: 50px;
+  padding: 5px 15px;
+  background-color: $peach;
+}
+
+.section__subtitle {
+  font-family: $second-family;
+  font-size: $h2-font-size;
+  font-weight: $font-bold;
+  color: $title-color;
+  line-height: 1.2;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
