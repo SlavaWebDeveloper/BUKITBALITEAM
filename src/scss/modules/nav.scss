@@ -84,8 +84,8 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        width: $size-icon;
-        height: $size-icon;
+        width: $bigsize-icon;
+        height: $bigsize-icon;
         color: $color-icon;
 
         @include laptop-above {
@@ -96,8 +96,8 @@
     // .nav__actions
 
     &__actions {
-        width: $size-icon;
-        height: $size-icon;
+        width: $bigsize-icon;
+        height: $bigsize-icon;
         color: $color-icon;
         column-gap: 8px;
 
@@ -111,6 +111,8 @@
     &__button {
         color: $color-icon;
         transition: color 0.4s;
+        width: $bigsize-icon;
+
 
         @include hover {
             color: $accent;

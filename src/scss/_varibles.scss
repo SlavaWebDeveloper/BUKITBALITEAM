@@ -1,10 +1,13 @@
+@use "./media" as *;
+
 /*========== Container ==========*/
 $container: 1440px;
 $padding-inline: 20px;
 $header-height: 5.5rem;
 
 /*========== Icons ==========*/
-$size-icon: 2.5rem;
+$size-icon: 1.5rem;
+$bigsize-icon: 3.125rem;
 $color-icon: #eeeeee;
 
 /*========== Main Colors ==========*/

@@ -1,0 +1,144 @@
+@use "../varibles" as *;
+@use "../media" as *;
+@use "../mixin" as *;
+
+.hero {
+    // .hero__swiper
+
+    &__swiper {
+        position: relative;
+        z-index: $z-tooltip;
+    }
+
+    // .hero__article
+
+    &__article {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding-top: 13rem;
+    }
+
+    // .hero__data
+
+    &__data {
+        @include laptop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-wrap: balance;
+        }
+    }
+
+    &__img,
+    &__shadow,
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    // .hero__img
+
+    &__img {
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // .hero__shadow
+
+    &__shadow {
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    // .hero__logo-img
+
+    &__logo-img {
+        margin-bottom: 1rem;
+    }
+
+    // .hero__title
+
+    &__title {
+        font-family: $second-family;
+        font-weight: $font-semi-bold;
+        font-size: $h1-font-size;
+        color: $white;
+        margin-bottom: 1rem;
+        max-width: 860px;
+
+        @include table {
+            font-size: calc($h1-font-size / 2);
+        }
+    }
+
+    // .hero__button
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        column-gap: 0.5rem;
+        color: $white;
+        font-size: 1rem;
+        font-weight: $font-semi-bold;
+        position: relative;
+        z-index: 1;
+
+        @include table {
+            font-size: $small-font-size;
+        }
+
+        svg {
+            width: $size-icon;
+
+            fill: $white;
+            transition:
+                transform 0.4s,
+                fill 0.4s;
+        }
+
+        @include hover {
+            svg {
+                fill: $accent;
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__social
+
+    &__social {
+        position: absolute;
+        bottom: 4rem;
+        left: 3.5rem;
+        z-index: $z-tooltip;
+        display: grid;
+        row-gap: 1.5rem;
+    }
+
+    // .hero__social-link
+
+    &__social-link {
+        width: $size-icon;
+        height: $size-icon;
+        color: $white;
+        transition: color 0.4s;
+
+        @include hover {
+            color: $accent;
+        }
+    }
+}

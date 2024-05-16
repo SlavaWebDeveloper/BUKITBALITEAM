@@ -1,0 +1,89 @@
+@use "../varibles" as *;
+@use "../media" as *;
+@use "../mixin" as *;
+
+.swiper {
+    height: 100vh;
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+    left: initial;
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    width: max-content;
+    height: max-content;
+    z-index: 100;
+    font-family: $second-family;
+
+    @include table-above {
+        top: 10rem;
+    }
+}
+
+.swiper-pagination-current {
+    font-weight: $font-semi-bold;
+    font-size: 48px;
+    color: $white;
+}
+
+.swiper-pagination-total {
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: initial;
+    width: initial;
+    height: initial;
+    outline: none;
+    color: $white;
+    width: $bigsize-icon;
+    height: $bigsize-icon;
+    cursor: pointer;
+    transition:
+        color 0.4s,
+        transform 0.4s;
+}
+
+.swiper-button-next {
+    @include hover {
+        transform: translateX(0.5rem);
+        color: $accent;
+    }
+}
+
+.swiper-button-prev {
+    @include hover {
+        transform: translateX(-0.5rem);
+        color: $accent;
+    }
+}
+
+.swiper-navigation {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 4rem;
+    z-index: $z-tooltip;
+    display: flex;
+    column-gap: 2.5rem;
+    height: max-content;
+
+    @include table-above {
+        right: 0;
+        column-gap: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) and (min-heigth: 800px) {
+    .swiper-pagination {
+        top: 13rem;
+    }
+}
