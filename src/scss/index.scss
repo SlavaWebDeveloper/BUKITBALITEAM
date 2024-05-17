@@ -8,10 +8,12 @@
 
 @import "normalize.css";
 
-@import "./modules/header.scss";
-@import "./modules/nav.scss";
-@import "./modules/hero.scss";
-@import "./modules/swiper.scss";
-@import "./modules/form.scss";
+@import "./modules/header";
+@import "./modules/nav";
+@import "./modules/hero";
+@import "./modules/swiper";
+@import "./modules/catalog";
+@import "./modules/catalog-card";
+@import "./modules/form";
 
-@import "./modules/footer.scss";
+@import "./modules/footer";

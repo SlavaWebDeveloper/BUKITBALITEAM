@@ -24,19 +24,19 @@
 }
 
 .section {
-  padding-block: 5rem 1rem;
+  padding-block: 3.125rem;
 
   @include laptop-above {
-    padding-block: 7rem 2rem;
+    padding-block: 5rem;
   }
 }
 
 .section__title {
+  display: inline-flex;
   font-family: $second-family;
   font-weight: $font-bold;
   font-size: $normal-font-size;
   color: $accent;
-  line-height: 1.1;
   border-radius: 50px;
   padding: 5px 15px;
   background-color: $peach;
@@ -44,7 +44,7 @@
 
 .section__subtitle {
   font-family: $second-family;
-  font-size: $h2-font-size;
+  font-size: $subtitle-font-size;
   font-weight: $font-bold;
   color: $title-color;
   line-height: 1.2;

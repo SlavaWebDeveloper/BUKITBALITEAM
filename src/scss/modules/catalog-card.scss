@@ -1,0 +1,88 @@
+@use "../varibles" as *;
+@use "../mixin" as *;
+@use "../media" as *;
+
+.catalog-card {
+    box-shadow: 0 16px 32px 0 rgba(7, 26, 29, 0.1);
+    background: $fon-cart;
+
+    // .catalog-card__link
+
+    &__link {
+    }
+
+    // .catalog-card__img-wrapper
+
+    &__img-wrapper {
+        display: inline-block;
+        position: relative;
+        max-width: 480px;
+        width: 100%;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 30%);
+        }
+    }
+
+    // .catalog-card__img
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // .catalog-card__body
+
+    &__body {
+        display: grid;
+        row-gap: 10px;
+        padding: 30px 15px;
+    }
+
+    // .catalog-card__price
+
+    &__price {
+        font-size: 1rem;
+        font-weight: normal;
+        color: $accent;
+    }
+
+    // .catalog-card__currency
+
+    &__currency {
+        font-weight: $font-semi-bold;
+        font-size: $font-card-size;
+    }
+
+    // .catalog-card__total
+
+    &__total {
+        font-weight: $font-semi-bold;
+        font-size: $font-card-size;
+    }
+
+    // .catalog-card__title
+
+    &__title {
+        font-weight: $font-semi-bold;
+        font-size: $h3-font-size;
+        color: $title-color;
+    }
+
+    // .catalog-card__description
+
+    &__description {
+        font-weight: $font-regular;
+        font-size: 1rem;
+        color: $gray;
+    }
+}

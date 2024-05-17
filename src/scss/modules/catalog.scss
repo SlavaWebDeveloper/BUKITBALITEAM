@@ -1,0 +1,29 @@
+@use "../varibles" as *;
+@use "../media" as *;
+
+.catalog {
+    // .catalog__header
+
+    &__header {
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 50px;
+    }
+
+    // .catalog__body
+
+    &__body {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include table {
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: minmax(20px, 480px);
+        }
+    }
+}
