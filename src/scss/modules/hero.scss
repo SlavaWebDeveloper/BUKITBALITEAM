@@ -22,8 +22,6 @@
     // .hero__data
 
     &__data {
-        padding-inline: $padding-inline;
-
         @include laptop {
             display: flex;
             flex-direction: column;
