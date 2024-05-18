@@ -1,0 +1,68 @@
+@use "../varibles" as *;
+@use "../mixin" as *;
+@use "../media" as *;
+
+.call {
+    box-shadow: 0 16px 32px 0 rgba(7, 26, 29, 0.1);
+    background: $accent;
+    // .call__container
+
+    &__container {
+        padding-block: 50px;
+        grid-template-columns: 60% auto;
+        align-items: center;
+
+        @include table-xs {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .call__wrapper-content
+
+    &__wrapper-content {
+    }
+
+    // .call__title
+
+    &__title {
+        font-family: $second-family;
+        font-weight: $font-semi-bold;
+        font-size: 50px;
+        line-height: 1.2;
+        color: $white;
+        margin-bottom: .625rem;;
+        
+        @include table {
+            font-size: 20px;
+        }
+    }
+
+    // .call__subtitle
+
+    &__subtitle {
+        font-family: $font-family;
+        font-weight: $font-regular;
+        font-size: 20px;
+        line-height: 1.3;
+        color: $white;
+
+        @include table {
+            font-size: 16px;
+        }
+    }
+
+    // .call__button
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-self: end;
+        gap: 10px;
+
+        @include table-xs {
+            font-size: initial;
+            justify-self: center;
+        }
+    }
+}
