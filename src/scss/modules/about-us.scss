@@ -186,5 +186,9 @@
             background-color: $black;
             color: $white;
         }
+
+        @include table {
+            margin-top: 50px;
+        }
     }
 }
