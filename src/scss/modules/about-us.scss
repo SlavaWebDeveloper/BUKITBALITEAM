@@ -37,7 +37,7 @@
         &-inner {
             padding: 0 40px;
             &::before {
-                content: url("./img/icons/about-us-circles-top-right.svg");
+                content: url("../img/icons/about-us-circles-top-right.svg");
                 position: absolute;
                 top: -30px;
                 left: 0;
@@ -48,7 +48,7 @@
             }
 
             &::after {
-                content: url("./img/icons/about-us-circles-bottom-right.svg");
+                content: url("../img/icons/about-us-circles-bottom-right.svg");
                 position: absolute;
                 bottom: -36px;
                 right: 0;
