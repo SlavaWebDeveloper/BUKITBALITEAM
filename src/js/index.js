@@ -4,6 +4,7 @@ import { form } from './modules/form';
 import mobileNav from './modules/mobile-nav';
 import blurHeader from './modules/blurHeader';
 import { heroSwiper } from './modules/hero-swiper';
+import { testimonialSwiper } from './modules/testimonial-swiper';
 
 
 
@@ -14,6 +15,7 @@ const init = () => {
   mobileNav();
   blurHeader();
   heroSwiper();
+  testimonialSwiper();
   
 };
 

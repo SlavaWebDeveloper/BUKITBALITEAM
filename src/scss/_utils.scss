@@ -26,6 +26,7 @@
 
 .section {
   padding-block: 3.125rem;
+  background-color: #FFFFFF;
 
   @include laptop-above {
     padding-block: 5rem;
