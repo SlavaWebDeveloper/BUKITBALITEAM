@@ -56,6 +56,14 @@
         font-size: 1rem;
         line-height: 1.3;
         color: $white;
+
+        a {
+            transition: color 0.5s ease;
+
+            @include hover {
+                color: $accent;
+            }
+        }
     }
 
     // .footer__content
@@ -99,7 +107,7 @@
         @include laptop {
             font-size: 2rem;
         }
-        
+
         @include table {
             font-size: 1.5rem;
         }
@@ -128,6 +136,12 @@
     // .footer__social-link
 
     &__social-link {
+        color: $white;
+        transition: color 0.5s ease;
+
+        @include hover {
+            color: $accent;
+        }
     }
 
     // .footer__list-price
@@ -148,6 +162,12 @@
     // .footer__price-img
 
     &__price-img {
+        color: $white;
+        transition: color 0.5s ease;
+
+        @include hover {
+            color: $accent;
+        }
     }
 
     // .footer__item
