@@ -186,7 +186,7 @@
             color: $white;
         }
 
-        @include table {
+        @include table-xs {
             margin-top: 50px;
             width: 100%;
             text-align: center;

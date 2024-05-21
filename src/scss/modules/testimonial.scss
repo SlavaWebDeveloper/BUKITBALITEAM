@@ -5,6 +5,10 @@
 .testimonial {
     background-color: $bg;
     height: 100vh;
+
+    @include table {
+        height: 60vh;
+    }
 }
 
 .testimonial__container {
@@ -21,6 +25,8 @@
     height: auto;
 }
 .testimonial__header {
+    text-align: center;
+
     justify-items: center;
 }
 

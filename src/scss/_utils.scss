@@ -10,13 +10,9 @@
   margin-inline: auto;
   padding-inline: $padding-inline;
 
-  // @include mobile {
-  //   margin-inline: 1rem;
-  // }
-
-  // @include laptop-above {
-  //   margin-inline: auto;
-  // }
+  @include table {
+    padding-inline: 10px;
+  }
 }
 
 .grid {
@@ -25,11 +21,15 @@
 }
 
 .section {
-  padding-block: 3.125rem;
-  background-color: #FFFFFF;
+  padding-block: 8.75rem;
+  background-color: #ffffff;
 
-  @include laptop-above {
+  @include laptop {
     padding-block: 5rem;
+  }
+
+  @include table {
+    padding-block: 1.875rem;
   }
 }
 
