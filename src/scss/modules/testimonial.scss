@@ -6,9 +6,9 @@
     background-color: $bg;
     height: 100vh;
 
-    @include table {
-        height: 60vh;
-    }
+    // @include table {
+    //     height: auto;
+    // }
 }
 
 .testimonial__container {
@@ -23,10 +23,15 @@
 
 .testimonial__wrapper {
     height: auto;
+    margin-bottom: 50px;
+
+    @include table {
+        margin-bottom: 10px;
+    }
 }
+
 .testimonial__header {
     text-align: center;
-
     justify-items: center;
 }
 
@@ -34,13 +39,11 @@
     background-position: center;
     background-size: cover;
     max-width: 370px;
-    box-shadow: 0 16px 32px 0 rgba(7, 26, 29, 0.1);
+    box-shadow: 0 8px 8px 0 rgba(7, 26, 29, 0.1);
     background-color: #ededed;
     height: auto;
     width: 100%;
     padding: 43px 30px;
-
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 
     @include table-xs {
         max-width: 320px;

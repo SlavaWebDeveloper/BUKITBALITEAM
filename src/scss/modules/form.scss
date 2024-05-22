@@ -54,7 +54,7 @@
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, $accent);
+  background: linear-gradient(135deg, $accent, $dark);
   position: absolute;
 }
 
