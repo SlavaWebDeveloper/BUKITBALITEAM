@@ -1,0 +1,202 @@
+@use "../varibles" as *;
+@use "../media" as *;
+
+#myCarousel {
+  max-width: 640px;
+  max-height: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#myCarousel .f-carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single .header .nav__link {
+  --white: #191d2c;
+}
+
+.single .header {
+  background-color: #c5c5c51f;
+}
+
+.single-card {
+  grid-template-columns: 60% 36%;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  @include laptop {
+    grid-template-columns: 1fr;
+  }
+
+  @include table {
+    height: auto;
+  }
+
+  // .single-card__wrapper-gallery
+
+  &__wrapper-gallery {
+    width: 100%;
+    padding: 10px;
+  }
+
+  // .single-card__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+  }
+
+  // .single-card__content-title
+
+  &__content-title {
+    align-self: start;
+    font-size: 1.5rem;
+
+    @include laptop {
+      align-self: center;
+    }
+  }
+
+  // .single-card__content-subtitle
+  &__content-subtitle {
+    font-size: 2rem;
+
+    @include table {
+      &.section__subtitle {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // .single-card__content-description
+
+  &__content-description {
+    color: black;
+  }
+
+  // ..single-card__specifications
+
+  &__specifications {
+    display: flex;
+
+    @include laptop {
+      align-self: center;
+    }
+  }
+
+  // .single-card__specifications-col
+
+  &__specifications-col {
+    display: grid;
+    gap: 8px;
+    padding-right: 20px;
+
+    &:not(:last-child) {
+      border-right: 4px solid var(--gray);
+    }
+
+    &:not(:first-child) {
+      padding-left: 20px;
+    }
+  }
+
+  // .single-card__specifications-number
+
+  &__specifications-number {
+    font-family: var(--second-family);
+    font-weight: var(--font-semi-bold);
+    font-size: 24px;
+    color: var(--gray);
+    position: relative;
+
+    &.bedrooms,
+    &.bathrooms {
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 24px;
+        height: 24px;
+
+        background-size: 24px 24px;
+      }
+    }
+
+    &.bedrooms {
+      &::before {
+        background-image: url("./img/icons/bedrooms.svg");
+      }
+    }
+
+    &.bathrooms {
+      &::before {
+        background-image: url("./img/icons/bathrooms.svg");
+      }
+    }
+  }
+
+  // .single-card__specifications-text
+  &__specifications-text {
+    font-family: var(--second-family);
+    font-weight: var(--font-regular);
+    font-size: 16px;
+    color: var(--gray);
+  }
+}
+
+.f-carousel {
+  --f-button-next-pos: -40px;
+  --f-button-prev-pos: -40px;
+  --f-button-svg-width: 40px;
+  --f-button-svg-height: 40px;
+
+  --f-button-color: var(--accent);
+
+  @include table {
+    --f-button-width: 0;
+    --f-button-height: 0;
+  }
+}
+.single-card__price-and-button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.catalog-card {
+  // .catalog-card__price
+
+  &__price {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--accent);
+  }
+
+  // .catalog-card__currency
+
+  &__currency {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--font-card-size);
+  }
+
+  // .catalog-card__total
+
+  &__total {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--font-card-size);
+  }
+}
+
+.button.single-card__button {
+  background-color: var(--white);
+}
