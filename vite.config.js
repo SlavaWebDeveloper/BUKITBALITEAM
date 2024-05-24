@@ -2,10 +2,6 @@ import { defineConfig } from "vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
-  esbuild: {
-    jsxFactory: 'jsx',
-    jsxInject: "import jsx from '@/js/jsx.js'",
-  },
   resolve: {
     alias: {
       "@": "/src",
@@ -29,8 +25,18 @@ export default defineConfig({
         quality: 80,
       },
       svg: {
-        
       }
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      input: {
+        normalize: '/src/scss/normalize.scss',
+        common: '/src/scss/common.scss',
+        main: '/index.html',
+        single: '/single.html',
+        404: '/404.html',
+      }
+    }
+  }
 })
