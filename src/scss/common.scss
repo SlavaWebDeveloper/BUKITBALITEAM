@@ -1,0 +1,10 @@
+@use "varibles";
+@use "utils";
+@use "fonts";
+@use "base";
+@use "media";
+
+@import "./modules/header";
+@import "./modules/nav";
+@import "./modules/switch";
+@import "./modules/footer";
