@@ -3,8 +3,8 @@
 @use "../media" as *;
 
 .catalog-card {
-    box-shadow: 0 16px 32px 0 rgba(7, 26, 29, 0.1);
-    background: $fon-cart;
+    box-shadow: var(--card-box-shadow);
+    background-color: var(--card-bg);
 
     // .catalog-card__link
 
@@ -36,6 +36,7 @@
 
     &__img {
         width: 100%;
+        aspect-ratio: 1;
         object-fit: cover;
         object-position: center;
     }
@@ -53,36 +54,36 @@
     &__price {
         font-size: 1rem;
         font-weight: normal;
-        color: $accent;
+        color: var(--card-color-title);
     }
 
     // .catalog-card__currency
 
     &__currency {
-        font-weight: $font-semi-bold;
-        font-size: $font-card-size;
+        font-weight: var(--font-semi-bold);
+        font-size: var(--font-card-size);
     }
 
     // .catalog-card__total
 
     &__total {
-        font-weight: $font-semi-bold;
-        font-size: $font-card-size;
+        font-weight: var(--font-semi-bold);
+        font-size: var(--font-card-size);
     }
 
     // .catalog-card__title
 
     &__title {
-        font-weight: $font-semi-bold;
-        font-size: $h3-font-size;
-        color: $title-color;
+        font-weight: var(--font-semi-bold);
+        font-size: var(--h3-font-size);
+        color: var(--card-color-text);
     }
 
     // .catalog-card__description
 
     &__description {
-        font-weight: $font-regular;
+        font-weight: var(--font-regular);
         font-size: 1rem;
-        color: $gray;
+        color: var(--card-color-text);
     }
 }

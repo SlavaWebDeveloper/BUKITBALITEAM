@@ -17,7 +17,7 @@
     width: max-content;
     height: max-content;
     z-index: 100;
-    font-family: $second-family;
+    font-family: var(--second-family);
 
     @include table-above {
         top: 10rem;
@@ -25,9 +25,9 @@
 }
 
 .swiper-pagination-current {
-    font-weight: $font-semi-bold;
+    font-weight: var(--font-semi-bold);
     font-size: 48px;
-    color: $white;
+    color: var(--white);
 }
 
 .swiper-pagination-total {
@@ -44,9 +44,9 @@
     width: initial;
     height: initial;
     outline: none;
-    color: $white;
-    width: $bigsize-icon;
-    height: $bigsize-icon;
+    color: var(--white);
+    width: var(--bigsize-icon);
+    height: var(--bigsize-icon);
     cursor: pointer;
     transition:
         color 0.4s,
@@ -56,14 +56,14 @@
 .swiper-button-next {
     @include hover {
         transform: translateX(0.5rem);
-        color: $accent;
+        color: var(--accent);
     }
 }
 
 .swiper-button-prev {
     @include hover {
         transform: translateX(-0.5rem);
-        color: $accent;
+        color: var(--accent);
     }
 }
 
@@ -71,7 +71,7 @@
     position: absolute;
     right: 1.5rem;
     bottom: 4rem;
-    z-index: $z-tooltip;
+    z-index: var(--z-tooltip);
     display: flex;
     column-gap: 2.5rem;
     height: max-content;

@@ -3,7 +3,7 @@
 @use "../mixin" as *;
 
 .testimonial {
-    background-color: $bg;
+    background-color: var(--bg);
     height: 100vh;
 
     // @include table {
@@ -78,24 +78,24 @@
     // .testimonial-card__name
 
     &__name {
-        font-family: $second-family;
+        font-family: var(--second-family);
         font-weight: 700;
         font-size: 30px;
         line-height: 130%;
         text-align: center;
-        color: $title-color;
+        color: var(--testimonial-color-title);
         margin-bottom: 20px;
     }
 
     // .testimonial-card__description
 
     &__description {
-        font-family: $font-family;
-        font-weight: $font-regular;
+        font-family: var(--font-family);
+        font-weight: var(--font-regular);
         font-size: 20px;
         line-height: 120%;
         text-align: center;
-        color: $dark;
+        color: var(--dark);
     }
 
     .swiper-slide-shadow-left,

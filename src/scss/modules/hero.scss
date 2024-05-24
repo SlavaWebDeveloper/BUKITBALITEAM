@@ -7,7 +7,7 @@
 
     &__swiper {
         position: relative;
-        z-index: $z-tooltip;
+        z-index: var(--z-tooltip);
     }
 
     // .hero__article
@@ -56,7 +56,7 @@
 
     &__shadow {
         z-index: -1;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: var(--hero-box-shadow);
     }
 
     // .hero__logo-img
@@ -68,15 +68,15 @@
     // .hero__title
 
     &__title {
-        font-family: $second-family;
-        font-weight: $font-semi-bold;
-        font-size: $h1-font-size;
-        color: $white;
+        font-family: var(--second-family);
+        font-weight: var(--font-semi-bold);
+        font-size: var(--h1-font-size);
+        color: var(--white);
         margin-bottom: 1rem;
         max-width: 860px;
 
         @include table {
-            font-size: calc($h1-font-size / 2);
+            font-size: calc(var(--h1-font-size) / 2);
         }
     }
 
@@ -87,20 +87,20 @@
         align-items: center;
         width: max-content;
         column-gap: 0.5rem;
-        color: $white;
+        color: var(--white);
         font-size: 1rem;
-        font-weight: $font-semi-bold;
+        font-weight: var(--font-semi-bold);
         position: relative;
         z-index: 1;
 
         @include table {
-            font-size: $small-font-size;
+            font-size: var(--small-font-size);
         }
 
         svg {
-            width: $size-icon;
+            width: var(--size-icon);
 
-            fill: $white;
+            fill: var(--white);
             transition:
                 transform 0.4s,
                 fill 0.4s;
@@ -108,7 +108,7 @@
 
         @include hover {
             svg {
-                fill: $accent;
+                fill: var(--accent);
                 transform: translateX(0.5rem);
             }
         }
@@ -124,7 +124,7 @@
     &__social {
         position: absolute;
         bottom: 4rem;
-        z-index: $z-tooltip;
+        z-index: var(--z-tooltip);
         display: grid;
         row-gap: 1.5rem;
     }
@@ -132,13 +132,13 @@
     // .hero__social-link
 
     &__social-link {
-        width: $size-icon;
-        height: $size-icon;
-        color: $white;
+        width: var(--size-icon);
+        height: var(--size-icon);
+        color: var(--white);
         transition: color 0.4s;
 
         @include hover {
-            color: $accent;
+            color: var(--accent);
         }
     }
 }

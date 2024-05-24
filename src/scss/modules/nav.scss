@@ -4,7 +4,7 @@
 
 .nav {
     position: relative;
-    height: $header-height;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +45,7 @@
 
     &__list {
         display: flex;
+        align-items: center;
         flex-direction: column;
         row-gap: 1.875rem;
 
@@ -67,14 +68,14 @@
     // .nav__link
 
     &__link {
-        font-family: $second-family;
-        font-weight: $font-semi-bold;
-        font-size: $header-footer-font-size;
-        color: $white;
+        font-family: var(--second-family);
+        font-weight: var(--font-semi-bold);
+        font-size: var(--header-footer-font-size);
+        color: var(--white);
         transition: color 0.4s;
 
         @include hover {
-            color: $accent;
+            color: var(--accent);
         }
     }
 
@@ -85,9 +86,9 @@
         z-index: 1;
         top: 20px;
         right: 20px;
-        width: $bigsize-icon;
-        height: $bigsize-icon;
-        color: $color-icon;
+        width: var(--bigsize-icon);
+        height: var(--bigsize-icon);
+        color: var(--color-icon);
 
         @include laptop-above {
             display: none;
@@ -97,9 +98,9 @@
     // .nav__actions
 
     &__actions {
-        width: $bigsize-icon;
-        height: $bigsize-icon;
-        color: $color-icon;
+        width: var(--bigsize-icon);
+        height: var(--bigsize-icon);
+        color: var(--color-icon);
         column-gap: 8px;
 
         @include laptop-above {
@@ -110,12 +111,12 @@
     // .nav__button
 
     &__button {
-        color: $color-icon;
+        color: var(--color-icon);
         transition: color 0.4s;
-        width: $bigsize-icon;
-        
+        width: var(--bigsize-icon);
+
         @include hover {
-            color: $accent;
+            color: var(--accent);
         }
     }
 
@@ -125,7 +126,7 @@
         width: 100%;
         height: 100%;
         color: inherit;
-        
+
         @include laptop-above {
             display: none;
         }
