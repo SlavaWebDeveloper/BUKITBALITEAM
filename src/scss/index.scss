@@ -1,14 +1,6 @@
-@use "varibles";
-@use "base";
-@use "fonts";
-@use "media";
-@use "mixin";
-@use "sticky-footer";
-@use "utils";
+@import "./common";
+@import "./normalize";
 
-@import "normalize.css";
-
-@import "./modules/header";
 @import "./modules/nav";
 @import "./modules/hero";
 @import "./modules/swiper";
@@ -19,4 +11,4 @@
 @import "./modules/form";
 @import "./modules/testimonial";
 
-@import "./modules/footer";
+@import "./modules/scrollup";
