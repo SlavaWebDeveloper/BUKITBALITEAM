@@ -6,11 +6,29 @@
 
     <title>BUKITBALITEAM</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#307487" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#307487"
+    />
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -43,26 +61,84 @@
             </li>
 
             <li class="nav__item">
-              <button
-                class="nav__button"
-                aria-label="a button to change the theme"
-              >
+              <label class="switch">
+                <input
+                  class="switch__input"
+                  type="checkbox"
+                  role="switch"
+                  id="darkModeToggle"
+                />
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="24"
-                  fill="currentColor"
+                  class="switch__icon switch__icon--light"
+                  viewBox="0 0 12 12"
+                  width="12px"
+                  height="12px"
+                  aria-hidden="true"
                 >
-                  <g clip-path="url(#a)">
+                  <g
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                  >
+                    <circle cx="6" cy="6" r="2" />
+                    <g stroke-dasharray="1.5 1.5">
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(0,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(45,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(90,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(135,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(180,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(225,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(270,6,6)"
+                      />
+                      <polyline
+                        points="6 10,6 11.5"
+                        transform="rotate(315,6,6)"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                <svg
+                  class="switch__icon switch__icon--dark"
+                  viewBox="0 0 12 12"
+                  width="12px"
+                  height="12px"
+                  aria-hidden="true"
+                >
+                  <g
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="1"
+                    stroke-linejoin="round"
+                    transform="rotate(-45,6,6)"
+                  >
                     <path
-                      d="M10.86 6a8 8 0 0 0 11.955 6.956C22.334 18.03 18.06 22 12.86 22c-5.523 0-10-4.477-10-10 0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10.86 6Zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4.86 12Zm14.164-9.709.836.209v1l-.836.209a2 2 0 0 0-1.455 1.455l-.21.836h-1l-.208-.836a2 2 0 0 0-1.455-1.455L13.86 3.5v-1l.836-.209A2 2 0 0 0 16.15.836L16.36 0h1l.209.836a2 2 0 0 0 1.455 1.455Zm5 5 .836.209v1l-.836.209a2 2 0 0 0-1.455 1.455l-.21.836h-1l-.208-.836a2 2 0 0 0-1.455-1.455L18.86 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L21.36 5h1l.209.836a2 2 0 0 0 1.455 1.455Z"
+                      d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"
                     />
                   </g>
-                  <defs>
-                    <clipPath id="a"><path d="M.86 0h24v24h-24z" /></clipPath>
-                  </defs>
                 </svg>
-              </button>
+                <span class="switch__sr">Dark Mode</span>
+              </label>
             </li>
           </ul>
 
@@ -991,6 +1067,17 @@
           </button>
         </div>
       </section>
+      <a href="#" class="scrollup" id="scroll-up">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828Z"
+          />
+        </svg>
+      </a>
     </main>
 
     <footer class="footer">
