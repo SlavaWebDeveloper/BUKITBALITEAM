@@ -1,7 +1,12 @@
-@use "../varibles" as *;
 @use "../media" as *;
 
 .catalog {
+    // .catalog__container 
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
     // .catalog__header
 
     &__header {
@@ -14,7 +19,7 @@
 
     &__body {
         grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
+        margin-bottom: 3rem;
 
         @include laptop {
             grid-template-columns: repeat(2, 1fr);
@@ -25,5 +30,10 @@
             justify-content: center;
             grid-template-columns: minmax(20px, 480px);
         }
+    }
+
+    // .catalog__button
+    &__button {
+        align-self: end;
     }
 }

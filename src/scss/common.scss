@@ -3,8 +3,10 @@
 @use "fonts";
 @use "base";
 @use "media";
+@import "./sticky-footer";
 
 @import "./modules/header";
 @import "./modules/nav";
 @import "./modules/switch";
 @import "./modules/footer";
+@import "./modules/scrollup";

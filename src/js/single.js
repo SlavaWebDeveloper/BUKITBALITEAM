@@ -1,15 +1,21 @@
+import "@/scss/normalize.scss";
+import "@/scss/common.scss"
+
+import '@/scss/index-single.scss';
+
+import { scrollRevealAnimation } from "./modules/scrollRevealAnimation";
+import { mobileNav } from './modules/mobile-nav';
+import { blurHeader } from './modules/blurHeader';
+import { toggleDarkMode } from './modules/toggleDarkMode';
+
 import "@fancyapps/ui/dist/carousel/carousel.css";
 import "@fancyapps/ui/dist/carousel/carousel.thumbs.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Thumbs } from "@fancyapps/ui/dist/carousel/carousel.thumbs.esm.js";
 import { Carousel, Fancybox } from "@fancyapps/ui";
+import { scrollUp } from './modules/scrollUp';
 
-import mobileNav from './modules/mobile-nav';
-import blurHeader from './modules/blurHeader';
-import toggleDarkMode from './modules/toggleDarkMode';
 
-import '@/scss/index-single.scss';
-import scrollRevealAnimation from "./modules/scrollRevealAnimation";
 
 const container = document.getElementById("myCarousel");
 const options = {
@@ -51,6 +57,7 @@ const init = () => {
   blurHeader();
   toggleDarkMode();
   scrollRevealAnimation();
+  scrollUp();
 };
 
 init();

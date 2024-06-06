@@ -1,0 +1,12 @@
+@use "./media" as *;
+
+@import "./modules/catalog";
+@import "./modules/catalog-card";
+
+.singles-wrapper {
+    padding-block: 120px;
+
+    @include table {
+        padding-block: 120px 60px;
+    }
+}

@@ -1,4 +1,3 @@
-@use "../varibles" as *;
 @use "../mixin" as *;
 @use "../media" as *;
 
@@ -105,10 +104,12 @@
     // .about-us__subtitle
 
     &__subtitle {
-        font-size: var(--h3-font-size);
+        &.section__subtitle {
+            font-size: var(--h3-font-size);
 
-        @include table {
-            font-size: calc(var(--h3-font-size) - 6px);
+            @include table {
+                font-size: calc(var(--h3-font-size) - 6px);
+            }
         }
     }
 
@@ -150,11 +151,17 @@
         display: grid;
         place-items: center;
         flex-shrink: 0;
+        color: var(--accent);
+        transition: 0.5s ease;
 
         img {
-            border-radius: 0;
             width: 24px;
             height: 24px;
+            border-radius: 0;
+        }
+
+        @include hover {
+            transform: scale(1.2);
         }
     }
 

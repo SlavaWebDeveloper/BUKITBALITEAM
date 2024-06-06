@@ -33,6 +33,7 @@ export default defineConfig({
       input: {
         normalize: '/src/scss/normalize.scss',
         common: '/src/scss/common.scss',
+        allCatalog: '/src/scss/all-catalog.scss',
         main: '/index.html',
         single: '/single.html',
         404: '/404.html',

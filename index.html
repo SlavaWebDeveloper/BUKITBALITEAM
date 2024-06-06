@@ -146,17 +146,7 @@
             class="nav__close"
             id="nav-close"
             aria-label="close button menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10.586 12 2.793 4.207l1.414-1.414L12 10.586l7.793-7.793 1.414 1.414L13.414 12l7.793 7.793-1.414 1.414L12 13.414l-7.793 7.793-1.414-1.414L10.586 12Z"
-              />
-            </svg>
-          </button>
+          ></button>
         </div>
 
         <div class="nav__actions">
@@ -164,15 +154,7 @@
             class="nav__toggle"
             id="nav-toggle"
             aria-label="open button menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M3 4h18v2H3V4Zm6 7h12v2H9v-2Zm-6 7h18v2H3v-2Z" />
-            </svg>
-          </button>
+          ></button>
         </div>
       </nav>
     </header>
@@ -402,7 +384,7 @@
       </section>
 
       <section class="catalog section" id="our-home">
-        <div class="container">
+        <div class="container catalog__container">
           <div class="grid catalog__header">
             <h2 class="section__title">Our home</h2>
             <p class="section__subtitle">Catalog</p>
@@ -525,6 +507,9 @@
               </a>
             </article>
           </div>
+          <a href="#" class="button catalog__button">
+            <span class="button__text">View all</span>
+          </a>
         </div>
       </section>
 
@@ -1008,27 +993,45 @@
               <span class="circle one"></span>
               <span class="circle two"></span>
 
-              <form action="index.html" autocomplete="off">
+              <form id="contactForm" action="index.html" autocomplete="off">
                 <h3 class="form__title">Contact us</h3>
                 <div class="input-container">
-                  <input type="text" name="name" class="input" />
+                  <input
+                    type="text"
+                    name="name"
+                    class="input"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                  />
                   <label for="">Username</label>
-                  <span>Username</span>
+                  <span class="input-span">Username</span>
                 </div>
                 <div class="input-container">
-                  <input type="email" name="email" class="input" />
+                  <input type="email" name="email" class="input" required />
                   <label for="">Email</label>
-                  <span>Email</span>
+                  <span class="input-span">Email</span>
                 </div>
                 <div class="input-container">
-                  <input type="tel" name="phone" class="input" />
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="input"
+                    required
+                  />
                   <label for="">Phone</label>
-                  <span>Phone</span>
+                  <span class="input-span">Phone</span>
+                  <span id="error-message" class="form__error-message"></span>
                 </div>
                 <div class="input-container textarea">
-                  <textarea name="message" class="input"></textarea>
+                  <textarea
+                    name="message"
+                    class="input"
+                    minlength="5"
+                  ></textarea>
                   <label for="">Message</label>
-                  <span>Message</span>
+                  <span class="input-span">Message</span>
                 </div>
                 <button type="submit" class="button btn">
                   <span class="button__text">Send</span>
@@ -1067,17 +1070,7 @@
           </button>
         </div>
       </section>
-      <a href="#" class="scrollup" id="scroll-up">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828Z"
-          />
-        </svg>
-      </a>
+      <a href="#" class="scrollup" id="scroll-up"></a>
     </main>
 
     <footer class="footer">

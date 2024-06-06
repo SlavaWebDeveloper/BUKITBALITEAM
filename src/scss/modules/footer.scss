@@ -1,4 +1,3 @@
-@use "../varibles" as *;
 @use "../mixin" as *;
 @use "../media" as *;
 
@@ -131,7 +130,7 @@
     // .footer__social-item
 
     &__social-item {
-        width: 24px;
+        width: var(--size-icon);
     }
 
     // .footer__social-link

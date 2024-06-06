@@ -1,12 +1,10 @@
-@use "../varibles" as *;
 @use "../media" as *;
 
 .contact {
   padding: 0;
-  
+
   @include laptop-min {
     padding-block: 5rem;
-
   }
 }
 
@@ -56,6 +54,7 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--dark));
   position: absolute;
+  filter: brightness(1.4);
 }
 
 .circle.one {
@@ -105,7 +104,7 @@ form {
 
 .input-container {
   position: relative;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .input {
@@ -173,7 +172,7 @@ textarea.input {
   color: #fff;
 }
 
-.input-container span {
+.input-container .input-span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -185,8 +184,8 @@ textarea.input {
   z-index: 500;
 }
 
-.input-container span:before,
-.input-container span:after {
+.input-container .input-span:before,
+.input-container .input-span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -198,11 +197,11 @@ textarea.input {
   transform: translateY(-50%);
 }
 
-.input-container span:before {
+.input-container .input-span:before {
   left: 50%;
 }
 
-.input-container span:after {
+.input-container .input-span:after {
   right: 50%;
 }
 
@@ -213,8 +212,9 @@ textarea.input {
   font-size: 0.8rem;
 }
 
-.input-container.focus span:before,
-.input-container.focus span:after {
+.input-container.focus .input-span:before,
+.input-container.focus .input-span:after,
+.input-container.focus .form__error-message::before {
   width: 50%;
   opacity: 1;
 }
@@ -268,7 +268,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(0deg, var(--peach) 0%, var(--accent) 50%);
+  background: linear-gradient(0deg, var(--gray) 0%, var(--accent) 70%);
   color: #fff;
   margin-right: 0.5rem;
   transition: 0.3s;
@@ -336,7 +336,7 @@ textarea.input {
   }
 
   .social-media {
-    padding: .625rem 0 0 0;
+    padding: 0.625rem 0 0 0;
   }
 }
 
@@ -361,7 +361,7 @@ textarea.input {
   .text,
   .information,
   .social-media p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .social-media p {
@@ -389,4 +389,86 @@ textarea.input {
   .btn {
     padding: 0.45rem 1.2rem;
   }
+}
+
+.form__error-message {
+  color: red;
+  font-size: 16px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+}
+
+.message-success {
+  background: rgba(0, 128, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+#add_feedback .error {
+  border: 1px solid red;
+}
+
+#add_feedback .required:after {
+  content: "*";
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+}
+
+.error-text {
+  background: #f59e9e;
+  padding: 15px 0px;
+  text-align: center;
+  color: #fff;
+}
+
+.error-name,
+.error-email,
+.error-comments {
+  display: inline-block;
+  font-size: 11px;
+  position: absolute;
+  top: -30px;
+  color: white;
+  border: 1px solid red;
+  padding: 5px 10px;
+  line-height: 1.1;
+  background: red;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.error-name:after,
+.error-email:after,
+.error-comments:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  border: 5px solid transparent;
+  border-top: 5px solid red;
+}
+
+.error-comments {
+  top: 16%;
+  left: 0;
+}
+
+.error-name {
+  left: 0;
+}
+
+.error-email {
+  right: 4%;
+}
+
+#add_feedback .required:after {
+  content: "*";
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
 }

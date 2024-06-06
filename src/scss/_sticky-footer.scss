@@ -1,5 +1,3 @@
-@use "./varibles" as *;
-
 html, body {
     min-height: 100vh;
     display: flex;
@@ -12,5 +10,5 @@ html, body {
 
 .footer {
 	padding: 60px 0;
-	background-color: $footer-bg;
+	background-color: var(--footer-bg);
 }

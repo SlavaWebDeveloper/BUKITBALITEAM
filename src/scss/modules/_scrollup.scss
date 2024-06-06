@@ -11,12 +11,20 @@
   text-shadow: black;
   box-shadow: 0 12px 24px rgba(5, 7, 15, 0.5);
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 6px;
   width: var(--size-icon);
   z-index: var(--z-fixed);
   transition:
     bottom 0.4s,
     transform 0.4s;
+
+  &::before {
+    content: url("../img/icons/arrow-top.png");
+    width: calc(var(--size-icon) - 1rem);
+    height: calc(var(--size-icon) - 1rem);
+  }
 
   @include laptop-above {
     right: 3rem;

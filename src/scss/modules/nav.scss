@@ -1,4 +1,3 @@
-@use "../varibles" as *;
 @use "../media" as *;
 @use "../mixin" as *;
 
@@ -19,6 +18,9 @@
     // .nav__menu
 
     &__menu {
+        &.show-menu {
+            z-index: 999999;
+        }
         @include laptop {
             position: fixed;
             top: 0;
@@ -68,10 +70,10 @@
     // .nav__link
 
     &__link {
+        color: var(--white);
         font-family: var(--second-family);
         font-weight: var(--font-semi-bold);
         font-size: var(--header-footer-font-size);
-        color: var(--white);
         transition: color 0.4s;
 
         @include hover {
@@ -83,12 +85,18 @@
 
     &__close {
         position: absolute;
-        z-index: 1;
+        z-index: 100;
         top: 20px;
         right: 20px;
         width: var(--bigsize-icon);
         height: var(--bigsize-icon);
         color: var(--color-icon);
+
+        &::before {
+            content: url("../img/icons/close-menu.png");
+            width: 100%;
+            height: 100%;
+        }
 
         @include laptop-above {
             display: none;
@@ -127,6 +135,12 @@
         height: 100%;
         color: inherit;
 
+        &::before {
+            content: url("../img/icons/burger-menu.png");
+            width: 100%;
+            height: 100%;
+        }
+
         @include laptop-above {
             display: none;
         }
@@ -135,4 +149,8 @@
     .show-menu {
         right: 0;
     }
+}
+
+body:not(.home) .nav__link {
+    --white: #191d2c;
 }
